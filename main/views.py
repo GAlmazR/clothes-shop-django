@@ -1,5 +1,6 @@
-from django.http import HttpResponse, HttpRequest
-from datetime import datetime
+from django.http import HttpRequest, HttpResponse
+from django.shortcuts import render
 
-def home(request: HttpRequest):
-    return HttpResponse(f'''<h1>Hello, {request.user.email}</h1>''')
+
+def index_view(request: HttpRequest):
+    return HttpResponse(render(request, 'products.html', {}))
