@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/reset.css' %}">
     <link rel="stylesheet" href="{% static 'styles/base.css' %}">
     {% block head %}
     {% endblock %}
@@ -21,7 +22,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main-content">
         {% block content %}
         {% endblock %}
     </main>
